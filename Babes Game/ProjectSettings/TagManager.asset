@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Tower
+  - DummyPlacement
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 266769827
+    locked: 0
+  - name: Tower
+    uniqueID: 3895238523
+    locked: 0
+  - name: Bullet
+    uniqueID: 2457125275
+    locked: 0
+  - name: Barrel
+    uniqueID: 1237286649
+    locked: 0
+  - name: Enemy
+    uniqueID: 2498455475
+    locked: 0
