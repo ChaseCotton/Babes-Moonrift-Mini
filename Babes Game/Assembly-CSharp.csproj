@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F6048277-6D3C-53F0-65CB-BD0C959DC262}</ProjectGuid>
+    <ProjectGuid>{A6F452F3-20DC-ED2F-0CC2-B445A6C47EB0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,14 +62,14 @@
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\ShopManager.cs" />
     <Compile Include="Assets\Scripts\Tower.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\EnemyList.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\MapGen.cs" />
     <Compile Include="Assets\Scripts\RoundController.cs" />
     <Compile Include="Assets\Scripts\TowerPlacing.cs" />
     <Compile Include="Assets\Scripts\BasicTower.cs" />
     <Compile Include="Assets\Scripts\MoneyManager.cs" />
-    <Compile Include="Assets\Scripts\Menu.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
