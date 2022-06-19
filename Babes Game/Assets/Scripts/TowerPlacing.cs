@@ -8,9 +8,13 @@ public class TowerPlacing : MonoBehaviour
 
     public ShopManager shopManager;
 
+    public MoneyManager moneyManager;
+
     public MouseSettings mouse;
 
     public Camera cam;
+
+    public GameObject menu;
 
     public LayerMask mask;
     public LayerMask towerMask;
@@ -27,7 +31,6 @@ public class TowerPlacing : MonoBehaviour
 
     public void Update()
     {
-        // bug when hitting buy button twice without placing 
 
         if (isBuilding == true)
         {
@@ -102,11 +105,7 @@ public class TowerPlacing : MonoBehaviour
                     newTowerObject.transform.position = hoverTile.transform.position;
 
                     endBuidling();
-                    shopManager.buyTower(basicTowerObject);
-                }
-                else
-                {
-                    Debug.Log("Not Enough Money");
+                    shopManager.buyTower(currentTowerPlacing);
                 }
             }
         }
@@ -114,9 +113,18 @@ public class TowerPlacing : MonoBehaviour
 
     public void startBuidling(GameObject towerToBuild)
     {
-        isBuilding = true;
+        if (moneyManager.currentPlayerMoney >= shopManager.GetTowerCost(towerToBuild))
+        {
 
-        
+        }
+        else
+        {
+            return;
+        }
+
+
+        menu.SetActive(false);
+        isBuilding = true;
 
         currentTowerPlacing = towerToBuild;
         dummyPlacement = Instantiate(currentTowerPlacing);

@@ -17,17 +17,49 @@ public class ShopManager : MonoBehaviour
     public MoneyManager moneyManager;
 
     public GameObject basicTowerPrefab;
+    public GameObject canonPrefab;
+    public GameObject lightPrefab;
+    public GameObject icePrefab;
+    public GameObject windPrefab;
+    public GameObject firePrefab;
 
     public int basicTowerCost;
+    public int canonCost;
+    public int lightCost;
+    public int iceCost;
+    public int windCost;
+    public int fireCost;
 
     public int GetTowerCost(GameObject towerPrefab)
     {
         int cost = 0;
 
-        if (towerPrefab = basicTowerPrefab)
+        if (towerPrefab == basicTowerPrefab)
         {
             cost = basicTowerCost;
         }
+        else if (towerPrefab == canonPrefab)
+        {
+            cost = canonCost;
+        }
+        else if (towerPrefab == lightPrefab)
+        {
+            cost = lightCost;
+        }
+        else if (towerPrefab == icePrefab)
+        {
+            cost = iceCost;
+        }
+        else if (towerPrefab == windPrefab)
+        {
+            cost = windCost;
+
+        }
+        else if (towerPrefab == firePrefab)
+        {
+            cost = fireCost;
+        }
+
         return cost;
     }
 

@@ -8,38 +8,58 @@ public class Menu : MonoBehaviour
     public GameObject buttonOne;
     public GameObject buttonTwo;
     public GameObject buttonThree;
+    public GameObject buttonFour;
 
     public GameObject credits;
 
+    public GameObject levels;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject feedback;
 
     public void CreditsHUDEnter()
     {
         buttonOne.SetActive(false);
         buttonTwo.SetActive(false);
         buttonThree.SetActive(false);
+        buttonFour.SetActive(false);
 
         credits.SetActive(true);
+        levels.SetActive(false);
     }
 
-    public void CreditsHUDExit()
+    public void MenuHUDEnter()
     {
         buttonOne.SetActive(true);
         buttonTwo.SetActive(true);
         buttonThree.SetActive(true);
+        buttonFour.SetActive(true);
 
         credits.SetActive(false);
+        levels.SetActive(false);
+        feedback.SetActive(false);
+    }
+
+    public void LevelsHUDEnter()
+    {
+        buttonOne.SetActive(false);
+        buttonTwo.SetActive(false);
+        buttonThree.SetActive(false);
+        buttonFour.SetActive(false);
+
+        credits.SetActive(false);
+        levels.SetActive(true);
+    }
+
+    public void feedbackHUDEnter()
+    {
+        buttonOne.SetActive(false);
+        buttonTwo.SetActive(false);
+        buttonFour.SetActive(false);
+        buttonThree.SetActive(false);
+
+        credits.SetActive(false);
+        levels.SetActive(false);
+        feedback.SetActive(true);
     }
 
     public void LoadScene(int index)

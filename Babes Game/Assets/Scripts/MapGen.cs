@@ -27,7 +27,7 @@ public class MapGen : MonoBehaviour
     public Color endColor;
 
 
-    private void Start()
+    private void Awake()
     {
         generateMap();
     }

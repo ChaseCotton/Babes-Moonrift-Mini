@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class RoundController : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class RoundController : MonoBehaviour
     private bool isRoundGoing;
     private bool isIntermission;
     private bool isStartOfRound;
+
+    public TextMeshProUGUI roundText;
 
     public int round;
     public enum RoundState
@@ -41,6 +44,7 @@ public class RoundController : MonoBehaviour
     private void Update()
     {
         stateHandler();
+        roundText.text = round.ToString();
     }
 
     private void spawnEnemies()
@@ -50,12 +54,13 @@ public class RoundController : MonoBehaviour
 
     IEnumerator ISpawnEnemy()
     {
-        // curently spawns same enemeis as round number
-        for (int i = 0;i < round; i++)
+        // curently spawns same enemeis as round number times two
+        for (int i = 0;i < round * 2; i++)
         {
             GameObject newEnemy = Instantiate(BasicEnemy, MapGen.startTile.transform.position, Quaternion.identity); ;
 
-            yield return new WaitForSeconds(1f);
+            // change value to mess with spawn times 
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
