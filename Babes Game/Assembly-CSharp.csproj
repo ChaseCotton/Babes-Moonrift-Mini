@@ -56,29 +56,29 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\IceTower.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\BarrelRotation.cs" />
     <Compile Include="Assets\Scripts\MouseSettings.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\FeedBackPackage\FormManager.cs" />
+    <Compile Include="Assets\Scripts\EndScreen.cs" />
+    <Compile Include="Assets\Scripts\WindTower.cs" />
+    <Compile Include="Assets\Scripts\CanonTower.cs" />
     <Compile Include="Assets\Scripts\ShopManager.cs" />
     <Compile Include="Assets\Scripts\Tower.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\EnemyList.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\FeedBackPackage\Survey.cs" />
     <Compile Include="Assets\Scripts\MapGen.cs" />
     <Compile Include="Assets\Scripts\RoundController.cs" />
-    <Compile Include="Assets\Scripts\TowerPlacing.cs" />
-    <Compile Include="Assets\Scripts\BasicTower.cs" />
-    <Compile Include="Assets\Scripts\MoneyManager.cs" />
-    <Compile Include="Assets\Scripts\CanonTower.cs" />
     <Compile Include="Assets\Scripts\ElectricTower.cs" />
-    <Compile Include="Assets\Scripts\IceTower.cs" />
-    <Compile Include="Assets\Scripts\WindTower.cs" />
+    <Compile Include="Assets\Scripts\TowerPlacing.cs" />
     <Compile Include="Assets\Scripts\FlameTower.cs" />
+    <Compile Include="Assets\Scripts\BasicTower.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
-    <Compile Include="Assets\FeedBackPackage\FormManager.cs" />
-    <Compile Include="Assets\FeedBackPackage\Survey.cs" />
-    <Compile Include="Assets\Scripts\EndScreen.cs" />
+    <Compile Include="Assets\Scripts\MoneyManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
