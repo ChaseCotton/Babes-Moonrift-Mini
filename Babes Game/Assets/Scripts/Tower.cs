@@ -28,6 +28,7 @@ public class Tower : MonoBehaviour
             if (currentTarget != null)
             {
                 shoot();
+                SoundManager.PlaySound("fire");
                 nextTimeToShoot = Time.time + timeTweenShot;
             }
         }

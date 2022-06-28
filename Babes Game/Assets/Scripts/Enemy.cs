@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     PlayerHealth playerHealth;
+    MoneyManager moneyManager;
 
     // enemy navigation along path tiles 
     // enemy stats
@@ -14,6 +15,8 @@ public class Enemy : MonoBehaviour
     public int enemyDamage = 1;
     private int coinReward;
     private int damage;
+
+    int moneyRandom = 0;
 
     private GameObject targetTile;
 
@@ -45,6 +48,10 @@ public class Enemy : MonoBehaviour
 
         if (enemyHealth <= 0)
         {
+            moneyManager = FindObjectOfType<MoneyManager>();
+            moneyRandom = Random.Range(0, 2);
+            moneyManager.AddMoney(moneyRandom);
+            SoundManager.PlaySound("die");
             die();
         }
     }
@@ -82,6 +89,7 @@ public class Enemy : MonoBehaviour
             {
                 playerHealth = FindObjectOfType<PlayerHealth>();
                 playerHealth.damagePlayer(enemyDamage);
+                SoundManager.PlaySound("end");
                 die();
             }
         }

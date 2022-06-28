@@ -7,8 +7,15 @@ public class MouseSettings : MonoBehaviour
     public bool resetMouse;
     private bool control;
 
+    public Texture2D cursorTexture;
+    private Vector2 cursorHotSpot;
+
     public void Start()
     {
+
+        cursorHotSpot = new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
+        Cursor.SetCursor(cursorTexture, cursorHotSpot, CursorMode.Auto);
+
         // preset mouse settings
 
         resetMouse = false;

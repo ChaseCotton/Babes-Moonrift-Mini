@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\RoundController.cs" />
     <Compile Include="Assets\Scripts\ElectricTower.cs" />
     <Compile Include="Assets\Scripts\TowerPlacing.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\FlameTower.cs" />
     <Compile Include="Assets\Scripts\BasicTower.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />

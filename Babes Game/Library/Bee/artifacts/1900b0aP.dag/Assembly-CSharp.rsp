@@ -345,6 +345,7 @@
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/RoundController.cs"
 "Assets/Scripts/ShopManager.cs"
+"Assets/Scripts/SoundManager.cs"
 "Assets/Scripts/Tower.cs"
 "Assets/Scripts/TowerPlacing.cs"
 "Assets/Scripts/WindTower.cs"

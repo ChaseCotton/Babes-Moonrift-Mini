@@ -21,6 +21,7 @@ public class RoundController : MonoBehaviour
 
     public TextMeshProUGUI roundText;
 
+    public int roundOld;
     public int round;
     public enum RoundState
     {
@@ -37,7 +38,8 @@ public class RoundController : MonoBehaviour
 
         timeVariable = Time.time + timeBeforeRoundStarts;
 
-        round = 1;
+        round = 0;
+        roundOld = 0;
 
     }
 
@@ -45,6 +47,13 @@ public class RoundController : MonoBehaviour
     {
         stateHandler();
         roundText.text = round.ToString();
+
+        if (round != roundOld)
+        {
+            SoundManager.PlaySound("start");
+            roundOld = round;
+        }
+
     }
 
     private void spawnEnemies()
@@ -68,7 +77,8 @@ public class RoundController : MonoBehaviour
     {
         if (isStartOfRound)
         {
-            if(Time.time >= timeVariable)
+
+            if (Time.time >= timeVariable)
             {
                 isStartOfRound = false;
                 isRoundGoing = true;
@@ -83,7 +93,7 @@ public class RoundController : MonoBehaviour
                 isIntermission = false;
                 isRoundGoing = true;
                 state = RoundState.isRoundGoing;
-
+                round++;
                 spawnEnemies();
             }
         } 
@@ -99,7 +109,6 @@ public class RoundController : MonoBehaviour
                 isRoundGoing = false;
                 state = RoundState.isIntermission;
                 timeVariable = Time.time + timeTweenWaves;
-                round++;
             }
         }
     }

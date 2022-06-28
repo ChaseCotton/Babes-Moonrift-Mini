@@ -12,9 +12,13 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject deathScreen;
 
+    private bool playSound;
+
     void Start()
     {
         playerHealth = startingHealth;
+
+        playSound = true;
     }
 
     public void Update()
@@ -45,6 +49,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void playerDeath()
     {
+        if (playSound is true)
+        {
+            SoundManager.PlaySound("lose");
+            playSound = false;
+        }
         playerHealth = 0;
         deathScreen.SetActive(true);
         Time.timeScale = 0f;
